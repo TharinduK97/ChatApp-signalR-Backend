@@ -36,7 +36,7 @@ namespace SignalRChat.Hubs
 
             _connections[Context.ConnectionId] = userConnection;
 
-            await Clients.Group(userConnection.Room).SendAsync("ReceiveMessage", userConnection.User, $"{userConnection.User} has joined {userConnection.Room}");
+            await Clients.Group(userConnection.Room).SendAsync("ReceiveMessage", userConnection.User, $"{userConnection.User} has joined to {userConnection.Room} chat room");
 
             await SendUsersConnected(userConnection.Room);
         }
