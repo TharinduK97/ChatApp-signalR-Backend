@@ -9,12 +9,12 @@ namespace SignalRChat.Hubs
 {
     public class ChatHub : Hub
     {
-        private readonly string _botUser;
+        
         private readonly IDictionary<string, UserConnection> _connections;
 
         public ChatHub(IDictionary<string, UserConnection> connections)
         {
-            _botUser = "MyChat Bot";            
+                        
             _connections = connections;
         }
 
